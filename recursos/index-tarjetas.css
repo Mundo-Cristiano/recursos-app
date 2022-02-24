@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  
+body {
+    background-color: rgb(60, 128, 168);
+    font-family: sans-serif;
+    font-size: 0.7rem;
+
+	background: url(burbujasHD.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	justify-content: center;
+	align-items: center;
+
+}
+
+body::before{
+	content:"";
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: linear-gradient(135deg,navy,lightblue,navy,purple,pink,purple);
+	opacity: 0.8;
+	z-index: -1;
+}
+  
+  
+  #galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: minmax(78px, auto);
+    gap: 10px;
+    padding: 10px;
+    grid-auto-flow: dense;
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    #galeria {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-auto-rows: minmax(52px, auto);
+    }
+  }
+  @media (min-width: 1024px) {
+    #galeria {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: minmax(104px, auto);
+    }
+  }
+  
+  #galeria img {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  ul {
+    border: solid lightblue 1px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255, 0.5);
+    list-style: none;
+  }
+
+  #img-activa {
+    border-radius: 5px;
+    width: 490px;
+    height: 251px;
+  }
+  
+  @media (max-width: 768px) {
+    #img-activa {
+      width: 290px;
+      height: 146px;
+    }
+  }
+  @media (min-width: 1024px) {
+    #img-activa {
+      width: 755px;
+      height: 390px;
+    }
+  }
+  
+  #contenedor-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  #contenedor-interno {
+    background: rgba(224, 224, 224, 0.7);
+    border-radius: 5px;
+    padding: 1%;
+    max-width: 500px;
+    min-height: 261px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    #contenedor-interno {
+      max-width: 300px;
+      min-height: 156px;
+    }
+  }
+  @media (min-width: 1024px) {
+    #contenedor-interno {
+      max-width: 765px;
+      min-height: 400px;
+    }
+  }
+
+  /*Botones*/
+  
+   /*Botones*/
+  
+   button {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    color: rgb(255, 0, 255);
+  }
+  
+  #btn-cierra {
+    position: absolute;
+    border-radius: 25px;
+    background: transparent;
+    border-color: transparent;
+    top:0%;
+    left: 0%;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  #btn-retrocede {
+    position: absolute;
+    border-radius: 25px;
+    background: transparent;
+    border-color: transparent;
+    top: 45%;
+    left: 0%;
+    font-size: 2rem;
+  }
+  
+  #btn-adelanta {
+    position: absolute;
+    background: transparent;
+    border-color: transparent;
+    border-radius: 25px;
+    top: 45%;
+    right: 0%;
+    font-size: 2rem;
+  }
